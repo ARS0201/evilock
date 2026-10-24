@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-espresso: #3B2923;
+    --color-coffee: #4B342B;
+    --color-walnut: #795548;
+    --color-caramel: #B8875B;
+    --color-bronze: #C69A6B;
+    --color-ivory: #F7F3EE;
+    --color-cream: #FFFDF9;
+    --color-beige: #E5D7C8;
+    --color-text: #30241F;
+    --color-muted: #88776B;
+    --color-forest: #397451;
+    --color-amber: #B7791F;
+    --color-crimson: #B84040;
+  }
+
+  body {
+    background-color: #F7F3EE;
+    color: #30241F;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Inter', sans-serif;
+    color: #4B342B;
+    letter-spacing: -0.015em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Scrollbar for Legal/Evidence Tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F3EE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E5D7C8;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8875B;
+}
+
+/* Component utilities */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#795548] hover:bg-[#4B342B] text-white font-medium text-sm transition-all duration-200 shadow-sm active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#FFFDF9] hover:bg-[#F7F3EE] text-[#4B342B] border border-[#E5D7C8] font-medium text-sm transition-all duration-200 shadow-sm active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-caramel {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#B8875B] hover:bg-[#A3744A] text-white font-medium text-sm transition-all duration-200 shadow-sm active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#B84040] hover:bg-[#9B3232] text-white font-medium text-sm transition-all duration-200 shadow-sm active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .card-cream {
+    @apply bg-[#FFFDF9] rounded-xl border border-[#E5D7C8] shadow-card transition-all duration-200;
+  }
+
+  .badge-verified {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-[#397451]/10 text-[#397451] border border-[#397451]/20;
+  }
+
+  .badge-mismatch {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-[#B84040]/10 text-[#B84040] border border-[#B84040]/20;
+  }
+
+  .badge-pending {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-[#B7791F]/10 text-[#B7791F] border border-[#B7791F]/20;
+  }
+
+  .input-cream {
+    @apply w-full px-3.5 py-2.5 rounded-lg bg-[#FFFDF9] border border-[#E5D7C8] text-[#30241F] placeholder-[#88776B]/60 text-sm focus:outline-none focus:ring-2 focus:ring-[#B8875B] focus:border-transparent transition-all;
+  }
+}

@@ -1,0 +1,1174 @@
+# PROJECT: EviLock
+
+## Secure Digital Document Management and Evidence Integrity System
+
+### 1. PROJECT OVERVIEW
+
+Build a complete, responsive, professional full-stack web application named **EviLock**, based on Smart India Hackathon 2026 Problem Statement SIH26190: Secure Digital Document Management System for Legal and Investigation Documents.
+
+**Tagline:** Protecting Evidence. Preserving Trust.
+
+EviLock is a secure digital platform for storing, organizing, retrieving, verifying, and sharing sensitive legal and investigation documents.
+
+The target users include:
+
+* Police officers.
+* Investigating officers.
+* Legal officers and prosecutors.
+* Court-authorized personnel.
+* Forensic experts.
+* System administrators.
+* Authorized auditors.
+
+The system must manage documents such as:
+
+* FIRs and police reports.
+* Investigation records.
+* Witness statements.
+* Charge sheets.
+* Court filings.
+* Evidence records.
+* Forensic reports.
+* Legal notices.
+* Court judgments.
+* Other authorized legal documents.
+
+The application must address unauthorized access, document tampering, poor version control, fragmented document storage, inefficient collaboration, and a lack of traceable document activity.
+
+Build a working application, not merely a static UI design. Implement a functional frontend, backend, database, authentication, authorization, document management, and audit functionality.
+
+Do not fabricate successful operations or show simulated results as real security verification.
+
+---
+
+### 2. TECHNOLOGY STACK
+
+Use the following stack:
+
+**Frontend**
+
+* React.js.
+* TypeScript.
+* Vite.
+* Tailwind CSS.
+* shadcn/ui or an equivalent component library.
+* Lucide React icons.
+* React Router.
+* Recharts.
+* React Hook Form.
+* Zod validation.
+
+**Backend**
+
+* Python.
+* FastAPI.
+* REST APIs.
+* Pydantic.
+* SQLAlchemy.
+* Alembic database migrations.
+
+**Database**
+
+* PostgreSQL.
+
+**Security**
+
+* Secure password hashing using Argon2id.
+* Secure authentication sessions using HttpOnly cookies.
+* Role-based access control.
+* Multi-factor authentication support.
+* HTTPS in deployment.
+* Encryption at rest.
+* SHA-256 document hashing.
+* Digital signature verification.
+* Rate limiting.
+* Input validation.
+* Audit logging.
+
+**Document storage**
+
+* Private local storage during development.
+* Private object storage for production.
+* Access-controlled document previews and downloads.
+* Configurable file validation and malware scanning.
+
+**Integrity verification**
+
+* SHA-256 hashing.
+* Append-only, tamper-evident integrity ledger.
+* Hash-chain verification.
+* Support for future integration with a permissioned blockchain such as Hyperledger Fabric.
+
+Clearly distinguish the prototype integrity ledger from a real blockchain deployment.
+
+---
+
+### 3. BRANDING AND COLOUR THEME
+
+The entire application must follow a sophisticated **brown, espresso, walnut, caramel, and cream colour palette**.
+
+Do not use the conventional blue cybersecurity dashboard theme.
+
+#### Primary colour palette
+
+* Dark Espresso Brown: `#3B2923`
+* Deep Coffee: `#4B342B`
+* Walnut Brown: `#795548`
+* Warm Caramel: `#B8875B`
+* Soft Bronze: `#C69A6B`
+* Warm Ivory: `#F7F3EE`
+* Soft Cream: `#FFFDF9`
+* Sand Beige: `#E5D7C8`
+* Main Text: `#30241F`
+* Secondary Text: `#88776B`
+* Forest Green: `#397451`
+* Amber: `#B7791F`
+* Muted Crimson: `#B84040`
+
+#### Design rules
+
+1. Use dark espresso brown for the sidebar and important brand elements.
+2. Use walnut brown for primary buttons and selected navigation items.
+3. Use caramel and bronze sparingly for highlights and important indicators.
+4. Use warm ivory for the main page background.
+5. Use soft cream for cards, forms, tables, and modal dialogs.
+6. Use sand beige for subtle borders and separators.
+7. Use dark coffee for headings and primary text.
+8. Use forest green for successful verification.
+9. Use amber for warnings and pending actions.
+10. Use muted crimson for failed verification and security alerts.
+
+Maintain sufficient contrast for readability and accessibility.
+
+Use subtle shadows, restrained rounded corners, clean spacing, and elegant typography.
+
+Avoid excessive gradients, glowing effects, neon colours, cartoon icons, and unnecessary animations.
+
+#### Logo
+
+Create a clean, professional logo featuring:
+
+* A shield representing security.
+* A document representing legal records.
+* A subtle link or verification symbol representing evidence integrity.
+
+Use a simple, recognizable symbol that works on light and dark backgrounds.
+
+Display the word **EviLock** beside the logo.
+
+Use the tagline:
+
+"Protecting Evidence. Preserving Trust."
+
+The logo should look appropriate for a professional legal technology platform.
+
+---
+
+### 4. PUBLIC LANDING PAGE
+
+Create an elegant landing page introducing EviLock.
+
+#### Navigation bar
+
+* EviLock logo.
+* Home.
+* Features.
+* Security.
+* Workflow.
+* About.
+* Sign In.
+
+Use a cream background and espresso-brown typography.
+
+#### Hero section
+
+Heading:
+
+"Every Piece of Evidence Deserves to Be Protected."
+
+Supporting text:
+
+"EviLock brings legal documents, investigation records, and digital evidence into one secure workspace—preserving document integrity, controlling access, and maintaining a trustworthy record of every action."
+
+Primary button: "Access Secure Portal"
+
+Secondary button: "Explore Features"
+
+Use a premium, understated visual with a shield-and-document illustration.
+
+#### Feature cards
+
+Create six feature cards:
+
+1. Secure Document Repository.
+2. Evidence Integrity Verification.
+3. Role-Based Access Control.
+4. Transparent Audit Trails.
+5. Intelligent Document Search.
+6. Secure Collaboration.
+
+Use simple line icons with restrained caramel accents.
+
+#### How it works
+
+Display the workflow:
+
+Upload Document → Generate Integrity Hash → Classify and Organize → Assign Permissions → Review or Share → Maintain Audit History.
+
+#### Security section
+
+Explain:
+
+* Secure document storage.
+* Document integrity checks.
+* Permission-controlled access.
+* Version history.
+* Digital signatures.
+* Audit trails.
+
+#### Footer
+
+Include:
+
+* About EviLock.
+* Security Overview.
+* Privacy Notice.
+* Terms of Use.
+* Contact Information.
+
+Do not claim government endorsement, official department partnerships, or security certifications that have not been obtained.
+
+---
+
+### 5. AUTHENTICATION
+
+Create a professional login page using the brown and cream theme.
+
+Include:
+
+* Username or official email.
+* Password.
+* Show/hide password.
+* MFA verification when enabled.
+* Forgot password.
+* Loading indicator.
+* Validation messages.
+* Secure logout.
+* Session expiration handling.
+
+Implement administrator-controlled account creation.
+
+Do not allow unrestricted public registration for privileged roles.
+
+Store only securely hashed passwords.
+
+Use server-side authorization and secure session management.
+
+Include login rate limiting, account lockout controls, and session invalidation.
+
+---
+
+### 6. USER ROLES AND PERMISSIONS
+
+Implement these roles:
+
+**System Administrator**
+
+* Manage accounts and roles.
+* Manage departments and document categories.
+* Configure retention policies.
+* Review system security events.
+* Manage application settings.
+* Review authorized audit records.
+
+**Investigating Officer**
+
+* Create investigation cases.
+* Upload investigation documents.
+* Organize evidence.
+* Create document versions.
+* Request and grant authorized access within assigned permissions.
+* Verify document integrity.
+
+**Police Officer**
+
+* Upload police reports.
+* Access assigned cases.
+* Search permitted records.
+* Update authorized metadata.
+* Submit documents for review.
+
+**Legal Officer / Prosecutor**
+
+* Review investigation records.
+* Manage charge sheets and legal filings.
+* Add review comments.
+* Upload authorized legal documents.
+
+**Court-Authorized User**
+
+* Access documents explicitly shared with the court.
+* Verify document hashes and signatures.
+* View authorized document history.
+* Download permitted records.
+
+**Forensic Expert**
+
+* Access assigned forensic cases.
+* Upload forensic reports.
+* Record analysis notes.
+* Verify evidence integrity.
+
+**Auditor**
+
+* Review authorized audit records.
+* Inspect access history.
+* Verify ledger entries.
+* Export permitted audit reports.
+
+Enforce permissions on the backend for every sensitive operation.
+
+Support permissions for viewing, uploading, downloading, editing metadata, creating versions, sharing, reviewing, archiving, verifying, and viewing audit history.
+
+Apply the principle of least privilege.
+
+Do not automatically give every administrator unrestricted access to confidential documents.
+
+---
+
+### 7. ROLE-SPECIFIC DASHBOARD
+
+Create a responsive dashboard with:
+
+* Total accessible documents.
+* Active authorized cases.
+* Recent uploads.
+* Pending reviews.
+* Pending access requests.
+* Verification failures.
+* Recent authorized activity.
+
+Include charts for:
+
+* Document categories.
+* Monthly uploads.
+* Case status.
+* Verification outcomes.
+* Document activity.
+
+Add quick actions:
+
+* Upload Document.
+* Create Case.
+* Search Documents.
+* Verify Integrity.
+* Request Access.
+* View Audit History.
+
+Use actual database records for all statistics.
+
+Show appropriate empty states when no records exist.
+
+Never fabricate document counts, case statistics, or verification results.
+
+Use espresso-brown navigation, cream cards, caramel highlights, and clear status indicators.
+
+---
+
+### 8. DOCUMENT MANAGEMENT
+
+Implement a complete document repository.
+
+#### Categories
+
+* FIR and Police Reports.
+* Investigation Records.
+* Witness Statements.
+* Charge Sheets.
+* Court Filings.
+* Evidence Records.
+* Forensic Reports.
+* Legal Notices.
+* Court Judgments.
+* Other Authorized Documents.
+
+#### Upload form
+
+Include:
+
+* Document title.
+* Document category.
+* Case ID.
+* Department.
+* Description.
+* Document date.
+* Reference number.
+* Confidentiality level.
+* Keywords and tags.
+* Retention classification.
+* Authorized users or groups.
+* File attachment.
+
+Support PDF, DOCX, XLSX, CSV, TXT, JPEG, and PNG.
+
+Validate file extensions, MIME types, file signatures, and file size on the backend.
+
+Reject executable and unexpected formats.
+
+Use malware scanning where available.
+
+Store documents in private storage, never in a publicly accessible folder.
+
+#### Upload workflow
+
+1. Verify user permissions.
+2. Validate the uploaded file.
+3. Generate a unique document ID.
+4. Calculate the SHA-256 hash.
+5. Store the document securely.
+6. Save metadata in PostgreSQL.
+7. Create a version record.
+8. Add an integrity-ledger entry.
+9. Record the upload in the audit trail.
+10. Return a confirmation only after the operation succeeds.
+
+#### Document table
+
+Display:
+
+* Document ID.
+* Title.
+* Category.
+* Case ID.
+* Uploader.
+* Department.
+* Upload date.
+* Current version.
+* Confidentiality.
+* Integrity status.
+* Document status.
+* Authorized actions.
+
+Include sorting, filtering, pagination, and search.
+
+#### Document details
+
+Display:
+
+* Metadata.
+* Secure preview.
+* Version history.
+* File hash.
+* Integrity status.
+* Digital signature status.
+* Access permissions.
+* Relevant audit events.
+
+Apply the same access controls to document previews, downloads, metadata, and search results.
+
+---
+
+### 9. CASE MANAGEMENT
+
+Implement investigation case management.
+
+Allow authorized users to create cases with:
+
+* Case title.
+* Case reference.
+* Case type.
+* Description.
+* Department.
+* Assigned officer.
+* Authorized collaborators.
+* Opening date.
+* Confidentiality level.
+* Status.
+
+Case statuses:
+
+* Open.
+* Under Investigation.
+* Under Legal Review.
+* Submitted to Court.
+* Closed.
+* Archived.
+
+Each case should include:
+
+* Overview.
+* Authorized team members.
+* Associated documents.
+* Evidence records.
+* Legal filings.
+* Activity timeline.
+* Pending actions.
+* Access requests.
+
+Ensure that case membership and document permissions are enforced consistently.
+
+---
+
+### 10. DOCUMENT VERSION CONTROL
+
+Never silently overwrite a previous document version.
+
+When an authorized user submits a correction:
+
+1. Preserve the previous version.
+2. Create a new version.
+3. Calculate a new SHA-256 hash.
+4. Record the uploader and timestamp.
+5. Store the change description.
+6. Create an integrity-ledger entry.
+7. Record the event in the audit trail.
+
+Display a version timeline.
+
+Allow authorized users to retrieve previous versions.
+
+For evidence records, use a controlled correction or superseding-record workflow.
+
+Preserve original evidence bytes and prevent ordinary users from modifying historical versions.
+
+---
+
+### 11. INTEGRITY LEDGER AND BLOCKCHAIN
+
+Create a dedicated page called "Integrity Ledger."
+
+Use the EviLock brown theme throughout the interface.
+
+For the initial prototype, implement an append-only, tamper-evident ledger.
+
+Each entry must include:
+
+* Entry ID.
+* Document ID.
+* Version ID.
+* Document SHA-256 hash.
+* Previous ledger-entry hash.
+* Entry hash.
+* Event type.
+* Actor ID.
+* Timestamp.
+
+Calculate the ledger-entry hash from canonicalized entry data, including the previous-entry hash.
+
+Implement a verification process that checks:
+
+* Stored file hash.
+* Original recorded hash.
+* Ledger-entry integrity.
+* Previous-entry hash relationships.
+* Digital signatures where applicable.
+
+Display these outcomes:
+
+**VERIFIED:** The document hash matches its reference, and the required ledger checks pass.
+
+**MISMATCH:** The document hash differs from its reference.
+
+**LEDGER ERROR:** Ledger consistency checks failed.
+
+**UNVERIFIABLE:** Required verification data or services are unavailable.
+
+Provide a button labelled "Verify Integrity."
+
+Show the result, timestamp, version, expected hash, actual hash, and verification details only to authorized users.
+
+Record verification attempts in the audit trail.
+
+Do not falsely claim that an ordinary database hash chain is a real blockchain.
+
+Keep the architecture ready for integration with Hyperledger Fabric or another suitable permissioned blockchain.
+
+A real blockchain integration must be separately configured, connected, and tested before being described as implemented.
+
+Never store confidential document contents directly on a blockchain.
+
+---
+
+### 12. DIGITAL SIGNATURES
+
+Create a digital signature verification page.
+
+Display:
+
+* Signed document version.
+* Signer information.
+* Certificate fingerprint.
+* Signature timestamp.
+* Certificate validity.
+* Verification result.
+
+Use recognized cryptographic libraries and standards.
+
+Do not treat typed names or signature images as cryptographically verified digital signatures.
+
+If trusted certificate validation is not configured, explain that limitation clearly.
+
+Keep signature verification separate from document-hash verification.
+
+---
+
+### 13. ACCESS CONTROL AND SHARING
+
+Implement document-level permissions.
+
+Allow authorized users to:
+
+* Grant access.
+* Revoke access.
+* Set access expiration.
+* Configure viewing and downloading permissions.
+* Request access.
+* Approve or reject requests.
+* Provide reasons for sensitive access.
+* Review sharing history.
+
+Access request workflow:
+
+Request → Authorized Approver → Review → Approval or Rejection → Permission Update → Notification → Audit Entry.
+
+Never grant restricted access automatically.
+
+For external sharing, use revocable, high-entropy tokens, expiration, and additional authentication where appropriate.
+
+Do not expose public file URLs.
+
+---
+
+### 14. ADVANCED SEARCH
+
+Implement global and advanced document search.
+
+Search by:
+
+* Document title.
+* Document ID.
+* Case ID.
+* Reference number.
+* Category.
+* Department.
+* Date range.
+* Tags.
+* Keywords.
+* Uploader.
+* Status.
+* Confidentiality.
+
+Include filters, sorting, pagination, and saved searches where appropriate.
+
+Apply authorization filters before returning search results.
+
+Optionally support OCR for scanned documents and natural-language search.
+
+Mark extracted or AI-generated content as potentially incomplete.
+
+Never send confidential documents to an external AI provider without explicit authorization.
+
+---
+
+### 15. AUDIT TRAIL
+
+Record:
+
+* Successful and failed logins.
+* Document uploads.
+* Document previews and downloads.
+* Metadata changes.
+* New versions.
+* Integrity checks.
+* Access grants and revocations.
+* Access request decisions.
+* Sharing events.
+* Case membership changes.
+* Permission changes.
+* Review decisions.
+* Administrative operations.
+* Failed authorization attempts.
+
+Include:
+
+* Event ID.
+* Timestamp.
+* Actor ID.
+* Action.
+* Target record.
+* Result.
+* Reason where required.
+* Request ID.
+* Relevant security metadata.
+
+Never log passwords, session tokens, or unnecessary confidential content.
+
+Provide search, filtering, pagination, and authorized report exports.
+
+Protect historical records against ordinary user modification.
+
+---
+
+### 16. NOTIFICATIONS AND REVIEWS
+
+Implement in-app notifications for:
+
+* New document assignments.
+* Access requests.
+* Approval and rejection.
+* Pending reviews.
+* New document versions.
+* Expiring permissions.
+* Sharing events.
+* Integrity failures.
+* Case updates.
+
+Create a document review workflow:
+
+Upload → Integrity Check → Submit for Review → Review → Approve, Reject, or Request Correction.
+
+Record every decision.
+
+Display which document version is being reviewed.
+
+Provide an email integration only when an email provider is configured.
+
+---
+
+### 17. RETENTION AND ARCHIVING
+
+Implement:
+
+* Retention policies.
+* Archive workflows.
+* Legal holds.
+* Retention-expiration alerts.
+* Authorized restoration.
+* Controlled deletion.
+
+Legal holds must prevent routine deletion while active.
+
+Do not automatically delete legal or evidence records when a retention period expires if applicable policy or a legal hold prohibits deletion.
+
+Record lifecycle operations in the audit trail.
+
+---
+
+### 18. ADMINISTRATION
+
+Create an administration workspace for:
+
+* User management.
+* Role management.
+* Department management.
+* Document categories.
+* Retention policies.
+* Upload limits.
+* Session settings.
+* Storage settings.
+* Notification settings.
+* Integrity-ledger settings.
+* Security monitoring.
+
+Protect sensitive operations with server-side authorization.
+
+Require additional authentication where appropriate.
+
+---
+
+### 19. DATABASE
+
+Use PostgreSQL with SQLAlchemy and Alembic.
+
+Create normalized tables for:
+
+* users.
+* roles.
+* permissions.
+* user_roles.
+* role_permissions.
+* departments.
+* cases.
+* case_members.
+* documents.
+* document_versions.
+* document_categories.
+* document_permissions.
+* access_requests.
+* document_shares.
+* integrity_ledger.
+* digital_signatures.
+* document_reviews.
+* audit_logs.
+* notifications.
+* retention_policies.
+
+Add any additional tables required for sessions, MFA, password resets, legal holds, and storage management.
+
+Use foreign keys, indexes, unique constraints, database transactions, and migrations.
+
+Store large document files in private storage rather than ordinary metadata columns.
+
+---
+
+### 20. REST API
+
+Create organized FastAPI endpoints for:
+
+Authentication:
+
+* POST /api/auth/login
+* POST /api/auth/logout
+* GET /api/auth/me
+* POST /api/auth/mfa/verify
+
+Users:
+
+* GET /api/users
+* POST /api/users
+* PATCH /api/users/{id}
+
+Cases:
+
+* GET /api/cases
+* POST /api/cases
+* GET /api/cases/{id}
+* PATCH /api/cases/{id}
+
+Documents:
+
+* GET /api/documents
+* POST /api/documents
+* GET /api/documents/{id}
+* PATCH /api/documents/{id}/metadata
+* GET /api/documents/{id}/versions
+* POST /api/documents/{id}/versions
+* GET /api/documents/{id}/download
+* POST /api/documents/{id}/verify
+
+Permissions:
+
+* GET /api/documents/{id}/permissions
+* POST /api/documents/{id}/access-requests
+* POST /api/access-requests/{id}/approve
+* POST /api/access-requests/{id}/reject
+
+Audit:
+
+* GET /api/audit-logs
+* GET /api/documents/{id}/audit-history
+
+Notifications:
+
+* GET /api/notifications
+* PATCH /api/notifications/{id}/read
+
+Add endpoints for reviews, signatures, administration, search, reports, and sharing.
+
+Implement consistent response formats, server-side authorization, validation, pagination, and secure error handling.
+
+---
+
+### 21. SECURITY
+
+Implement:
+
+* Server-side access control.
+* Secure password hashing.
+* Secure sessions.
+* HTTPS in deployment.
+* CSRF protection where applicable.
+* SQL injection protection.
+* XSS protection.
+* Rate limiting.
+* File validation.
+* Private storage.
+* Audit logging.
+* Integrity verification.
+* Secret management.
+* Restrictive CORS.
+* Secure error handling.
+* Dependency checks.
+* Backup and recovery procedures.
+
+Do not expose credentials, signing keys, encryption keys, database secrets, or confidential documents in frontend code.
+
+Do not claim production-grade security without appropriate testing.
+
+---
+
+### 22. OPTIONAL AI FEATURES
+
+Add optional features for:
+
+* Document classification suggestions.
+* Metadata extraction.
+* OCR.
+* Natural-language search.
+* Document summaries.
+* Duplicate detection.
+
+Require human review for sensitive AI-generated metadata.
+
+Do not allow AI to approve documents or grant access automatically.
+
+Do not present AI-generated summaries as authoritative legal evidence.
+
+Provide a clear fallback when external AI services are unavailable.
+
+---
+
+### 23. REPORTS AND EXPORTS
+
+Create authorized reports for:
+
+* Document inventory.
+* Case records.
+* Pending reviews.
+* Access requests.
+* Integrity results.
+* Audit history.
+* Version history.
+* Retention and archive status.
+
+Support CSV and PDF exports.
+
+Apply permissions before generating reports.
+
+Audit sensitive exports and store generated reports securely.
+
+---
+
+### 24. REQUIRED PAGES
+
+Create:
+
+1. Landing Page.
+2. Login Page.
+3. MFA Page.
+4. Forgot Password Page.
+5. Role-Specific Dashboard.
+6. Document Repository.
+7. Upload Document.
+8. Document Details.
+9. Version History.
+10. Integrity Verification.
+11. Integrity Ledger.
+12. Case Management.
+13. Case Details.
+14. Access Requests.
+15. Permission Management.
+16. Secure Sharing.
+17. Document Review.
+18. Digital Signature Verification.
+19. Advanced Search.
+20. Audit Trail.
+21. Security Monitoring.
+22. Notifications.
+23. Reports and Exports.
+24. Archive and Retention.
+25. User Management.
+26. Department Management.
+27. Category Management.
+28. System Settings.
+29. User Profile.
+30. Unauthorized Access Page.
+31. Not Found Page.
+
+All pages must follow the EviLock brown-and-cream design system.
+
+---
+
+### 25. TESTING
+
+Create automated tests for:
+
+* Login and logout.
+* Invalid passwords.
+* Disabled accounts.
+* Session expiration.
+* Role-based authorization.
+* Unauthorized document access.
+* Upload validation.
+* Secure downloads.
+* Version creation.
+* Hash verification.
+* Modified document detection.
+* Ledger consistency.
+* Access revocation.
+* Audit recording.
+* Search permissions.
+* Signature verification errors.
+
+Execute the tests and report the actual results.
+
+Do not claim tests passed unless they have been run.
+
+---
+
+### 26. DEMO DATA
+
+Create a development-only seed script with fictional users, departments, cases, documents, and audit events.
+
+Clearly label all sample data as DEMO.
+
+Do not use real FIRs, witness information, or confidential evidence.
+
+Never create production administrator accounts with publicly documented default credentials.
+
+Allow the application to run with an empty database.
+
+---
+
+### 27. PROJECT STRUCTURE
+
+Organize the project as:
+
+ev ilock/
+frontend/
+src/
+components/
+layouts/
+pages/
+hooks/
+services/
+types/
+utils/
+routes/
+styles/
+backend/
+app/
+api/
+core/
+models/
+schemas/
+services/
+repositories/
+security/
+middleware/
+workers/
+main.py
+migrations/
+tests/
+requirements.txt
+storage/
+scripts/
+docs/
+.env.example
+README.md
+
+Use the actual directory name `evilock` without a space.
+
+Keep frontend, backend, database migrations, tests, and configuration organized.
+
+Never commit secrets or confidential documents.
+
+---
+
+### 28. IMPLEMENTATION PHASES
+
+Phase 1:
+
+* Frontend setup.
+* Brown-and-cream design system.
+* Database setup.
+* Authentication.
+* Role-based dashboard.
+
+Phase 2:
+
+* Document uploads.
+* Private storage.
+* Document listing.
+* Search.
+* Case management.
+* Version control.
+
+Phase 3:
+
+* SHA-256 hashing.
+* Integrity ledger.
+* Verification workflow.
+* Permissions.
+* Secure sharing.
+* Audit trail.
+
+Phase 4:
+
+* Reviews.
+* Digital signatures.
+* Notifications.
+* Retention.
+* Reports.
+
+Phase 5:
+
+* Optional AI features.
+* Automated tests.
+* Security testing.
+* Deployment preparation.
+
+Complete and test each phase before moving to the next.
+
+Preserve existing working functionality when extending the project.
+
+---
+
+### 29. DEPLOYMENT AND DOCUMENTATION
+
+Provide:
+
+* Installation instructions.
+* Environment setup.
+* PostgreSQL configuration.
+* Database migrations.
+* Development commands.
+* Production build instructions.
+* Test commands.
+* Demo-data setup.
+* Deployment guidance.
+* Security checklist.
+
+Create an informative README and an `.env.example` containing placeholder values only.
+
+Do not expose database credentials or private storage to the public internet.
+
+---
+
+### 30. FINAL EXPECTED RESULT
+
+Deliver a fully functional, responsive web application named **EviLock**, using a premium espresso-brown, walnut, caramel, and cream design system.
+
+The main demonstration must show:
+
+1. An administrator creates authorized users.
+2. An investigating officer creates a case.
+3. The officer uploads an investigation document.
+4. The system securely stores the document.
+5. The system calculates its SHA-256 hash.
+6. The system records the document version and integrity event.
+7. Access is granted only to authorized users.
+8. An authorized reviewer reviews the document.
+9. All relevant actions are recorded in the audit trail.
+10. An authorized user searches for and retrieves the document.
+11. The user verifies its integrity.
+12. A modified test document triggers an integrity mismatch.
+13. An auditor reviews the authorized document history.
+
+Demonstrate that unauthorized users cannot access restricted documents.
+
+Use real backend and database operations for all core functionality.
+
+If a feature depends on an external service that has not been configured, clearly identify the limitation instead of fabricating results.
+
+### FINAL INSTRUCTION
+
+First inspect the existing project. Preserve working code and functionality.
+
+Implement EviLock in manageable phases, prioritizing secure document management, reliable integrity verification, access control, case management, and auditability.
+
+Maintain the brown-and-cream visual identity consistently throughout the application.
+
+At completion, provide setup instructions, demo accounts if configured, actual test results, implemented features, unimplemented features, and remaining security limitations.
+
+The final product should be suitable for a professional Smart India Hackathon demonstration while making no unsupported claims about blockchain, digital signatures, or production security.
