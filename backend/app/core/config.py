@@ -24,7 +24,7 @@ class Settings(BaseSettings):
     # Document Storage
     STORAGE_LOCAL_PATH: str = os.getenv(
         "STORAGE_LOCAL_PATH",
-        os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../storage/vault"))
+        "/tmp/evilock_vault" if os.getenv("VERCEL") else os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../storage/vault"))
     )
     MAX_UPLOAD_SIZE_BYTES: int = 50 * 1024 * 1024  # 50 MB
     ALLOWED_EXTENSIONS: List[str] = ["pdf", "docx", "xlsx", "csv", "txt", "jpg", "jpeg", "png", "zip"]
